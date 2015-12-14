@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 allQuizes = [
 	"<p>What's the size of the moon?</p>", 
 	"<p>How many states are there in United States?</p>", 
@@ -14,4 +16,13 @@ var randomQuiz = function (){
 $('button').on('click', function(){
 	$('p').remove();
 	$('body').append(randomQuiz)
+});
+
+
+$('#submit').click(function(){
+	allQuizes.push("<p>"+ $('#question-add').val() + "</p>");
+	console.log(allQuizes);
+})
+
+
 });
